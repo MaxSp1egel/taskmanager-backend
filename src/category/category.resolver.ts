@@ -4,10 +4,7 @@ import { Category } from "./dto/category.dto";
 @Resolver(() => Category)
 export class CategoryResolver {
     @Query(() => [Category]) 
-    categories(
-        @Args('id', { type: () => Int }) id: number,
-        @Args('title') title: string,
-    ) {
+    categories() {
         return [];
     }
 }
