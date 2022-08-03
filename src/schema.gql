@@ -1,0 +1,13 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+"""category"""
+type Category {
+  id: Int!
+  title: String!
+}
+
+type Query {
+  categories(id: Int!, title: String!): [Category!]!
+}
