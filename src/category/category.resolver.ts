@@ -1,10 +1,18 @@
-import { Query, Resolver } from "@nestjs/graphql";
-import { Category } from "./dto/category.dto";
+import { Query, Resolver, Mutation, Args } from "@nestjs/graphql";
+import { CategoryService } from "./category.service";
+import { CategoryDto } from "./dto/category.dto";
 
-@Resolver(() => Category)
+@Resolver(() => CategoryDto)
 export class CategoryResolver {
-    @Query(() => [Category]) 
+    constructor(private categoryService: CategoryService) {}
+
+    @Query(() => [CategoryDto]) 
     categories() {
-        return [];
+        return this.categoryService.findAll();
+    }
+
+    @Mutation(() => CategoryDto)
+    createCategory(@Args('title') title: string) {
+        return this.categoryService.findOrCreate(title);
     }
 }

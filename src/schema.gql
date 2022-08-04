@@ -2,12 +2,27 @@
 # THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
 # ------------------------------------------------------
 
+"""todo"""
+type TodoDto {
+  category: CategoryDto!
+  id: Int!
+  text: String!
+  isCompleted: Boolean!
+}
+
 """category"""
-type Category {
+type CategoryDto {
   id: Int!
   title: String!
+  todos: [TodoDto!]!
 }
 
 type Query {
-  categories: [Category!]!
+  categories: [CategoryDto!]!
+}
+
+type Mutation {
+  createCategory(title: String!): CategoryDto!
+  checkTodo(id: Int!, status: Boolean!): TodoDto!
+  createTodo(categoryName: String!, text: String!): TodoDto!
 }
