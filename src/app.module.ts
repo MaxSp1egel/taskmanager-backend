@@ -21,6 +21,9 @@ import { Todo } from './todo/todo.entity';
       database: 'taskmanager',
       entities: [Category, Todo],
       synchronize: true,
+      ssl: {
+        rejectUnauthorized: false,
+      },
     }),
     GraphQLModule.forRoot<ApolloDriverConfig>({
       driver: ApolloDriver,
