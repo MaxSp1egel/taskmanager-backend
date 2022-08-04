@@ -1,9 +1,9 @@
 import { Query, Resolver } from "@nestjs/graphql";
-import { Category } from "./dto/category.dto";
+import { CategoryDto } from "./dto/category.dto";
 
-@Resolver(() => Category)
+@Resolver(() => CategoryDto)
 export class CategoryResolver {
-    @Query(() => [Category]) 
+    @Query(() => [CategoryDto]) 
     categories() {
         return [];
     }

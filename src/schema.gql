@@ -3,11 +3,11 @@
 # ------------------------------------------------------
 
 """category"""
-type Category {
+type CategoryDto {
   id: Int!
   title: String!
 }
 
 type Query {
-  categories: [Category!]!
+  categories: [CategoryDto!]!
 }
