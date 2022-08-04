@@ -23,7 +23,7 @@ export class TodoService {
                 id: id,
             },
             relations: {
-                category: true
+                category: true,
             },
         });
     }
