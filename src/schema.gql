@@ -9,5 +9,5 @@ type Category {
 }
 
 type Query {
-  categories(id: Int!, title: String!): [Category!]!
+  categories: [Category!]!
 }
