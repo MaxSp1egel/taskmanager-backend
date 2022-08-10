@@ -15,6 +15,12 @@ export class CategoryService {
             relations: {
                 todos: true,
             },
+            order: {
+                id: 'ASC',
+                todos: {
+                    id: 'ASC',
+                },
+            },
         });
     }
 
