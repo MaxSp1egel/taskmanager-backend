@@ -36,16 +36,6 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
           },
         } as TypeOrmModuleOptions;
       },
-      /*host: 'localhost',
-      port: 5432,
-      username: 'osipovmo',
-      password: 'gjcnuhtc',
-      database: 'taskmanager',
-      entities: [Category, Todo],
-      synchronize: true,
-      ssl: {
-        rejectUnauthorized: false,
-      },*/
     }),
     GraphQLModule.forRoot<ApolloDriverConfig>({
       driver: ApolloDriver,
